@@ -43,6 +43,18 @@ configure :build do
   # activate :minify_javascript
 end
 
+activate :rsync do |rsync|
+  rsync.production_server = "www.enbrut.net"
+  rsync.staging_server = "staging.enbrut.net"
+  rsync.path = "/home/deploy/www/enbrut"
+  rsync.user = "deploy"
+
+  # Optional:
+  # rsync.rsync_flags, "--compress --archive --delete -v"
+end
+
+# comanda: bundle exec middleman rsync production
+
 # activate :deploy do |deploy|
 #   deploy.method = :rsync
 #   deploy.host   = 'www.enbrut.net'
