@@ -1,24 +1,105 @@
+/*$background: #eeeff3;
+$margin_page: #fff;
+$margin_image: #d0d9de;*/
+$background: #fff;
+$margin_page: #d0d9de;
+$margin_image: #d0d9de;
+$main_color: #007ba6;
+$hover_color: #809ca6;
+
 body {
-  background-color: #900;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
+  background-color: $background;
+  color: #000;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  border: 15px solid $margin_page;
 }
 
-a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
+.main-content {
+  width: 800px;
+  margin: auto;
+  overflow: hidden;
 }
+/*header {
+  background: url("../images/header_02.jpg") no-repeat;
+  background-size: 100%;
+  background-size: 100%;
+  overflow: hidden;
+  height: 100px;
+}*/
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+header figure img {
+  width: 150px;
+  border-radius: 75px;
+}
+header h1 {
+  font-weight: 100;
+  margin-bottom: 0;
+}
+header p {
+  font-weight: 400;
+  margin-top: 0;
+}
+nav ul {
+  list-style:none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #911265;
+}
+main {
+  margin-top: 60px;
+}
+.web-projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+.web-projects figure {
+  width: 40%;
+  margin: 5px;
+  border: 10px solid $margin_image;
+  background-color: $margin_image;
+}
+.web-projects img {
+  width: 100%;
+  height: auto;
+  //border: 10px solid $margin_image;
+}
+nav {
+  margin-top: 40px;
+}
+nav ul{
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-around;
+}
+nav ul li {
+  background-color: $main_color;
+  color: #000;
+  margin: 10px;
+  padding: 5px 10px;
+}
+nav a {
+  color: #fff;
+}
+nav a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+.active {
+  background-color: $hover_color;
+  color: $main_color;
+}
+a, a:hover {
+  color: $main_color;
+  text-decoration: none;
+}
+.details {
+  font-size: 0.8em;
 }
