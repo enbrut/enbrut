@@ -28,11 +28,14 @@ end
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def li_menu_link link_text, url
+    klass = current_page.url == url ? 'active' : ''
+    content_tag :li, class: klass do
+      link_to link_text, url
+    end
+  end
+end
 
 # Build-specific configuration
 configure :build do
