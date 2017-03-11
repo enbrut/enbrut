@@ -54,22 +54,26 @@ nav a {
 main {
   margin-top: 60px;
 }
-.web-projects {
+.web-projects, .ux-ui-projects {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
+
+  figure {
+    margin: 20px 5px;
+    border: 10px solid $margin_image;
+    background-color: $margin_image;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    //border: 10px solid $margin_image;
+  }
 }
 .web-projects figure {
   width: 40%;
-  margin: 5px;
-  border: 10px solid $margin_image;
-  background-color: $margin_image;
-}
-.web-projects img {
-  width: 100%;
-  height: auto;
-  //border: 10px solid $margin_image;
 }
 nav {
   margin-top: 40px;
