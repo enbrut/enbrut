@@ -17,7 +17,7 @@ page '/*.txt', layout: false
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 # General configuration
-redirect "index.html", to: "/about.html"
+# redirect "index.html", to: "/about.html"
 
 # Reload the browser automatically whenever files change
 configure :development do

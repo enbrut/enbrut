@@ -3,8 +3,8 @@
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Middleman" %></title>
@@ -17,9 +17,8 @@
   <body class="<%= page_classes %>">
     <div class="main-content">
       <%= partial "layouts/header" %>
-      <main>
       <%= yield %>
-      </main>
+      <%= partial "layouts/footer" %>
     </div>
   </body>
 </html>
