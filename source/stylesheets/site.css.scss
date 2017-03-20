@@ -46,7 +46,10 @@ header nav {
 
     li {
       padding-right: 20px;
-      margin:0px;
+      margin: 13px 0 0 0;
+      &:first-child {
+        margin-top: 0px;
+      }
     }
     a {
       color: $text_color_neg;
@@ -55,6 +58,14 @@ header nav {
     a:hover {
       text-decoration: underline;
       color: $text_color_neg;
+    }
+    img {
+      width: 29px;
+      height: 30px;
+    }
+    .active {
+      text-decoration: underline;
+      font-weight: 400;
     }
 }
 
@@ -112,10 +123,11 @@ main figure {
   width: 500px;
   margin: 50px auto;
   padding: 5px;
-  border: 1px solid $main_color;
 }
 .ux-ui-projects figure img {
   width: 100%;
+  border: 1px solid $main_color;
+  padding: 5px;
 }
 .ux-ui-projects span, .web-projects span {
   font-size: 14px;
