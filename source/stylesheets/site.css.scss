@@ -1,4 +1,5 @@
 $main_color: #8C3761;
+$main_color-dark: #471B31;
 $text_color: #000;
 $text_color_neg: #fff;
 
@@ -10,6 +11,7 @@ body {
   border: 0px;
   font-size: 16px;
   background-color: #f0f0f0;
+  line-height: 1.4;
 }
 
 .main-content {
@@ -20,7 +22,7 @@ body {
   position: relative;
   background-color: #fff;
 }
-nav, .main_description, footer {
+nav, .main_description, footer, .about-me, .ux-ui-watsnext {
   padding: 0 30px;
 }
 
@@ -38,9 +40,13 @@ header nav {
     ul {
       display: flex;
       flex-flow: row wrap;
+      margin: 0;
+      padding: 0;
     }
+
     li {
       padding-right: 20px;
+      margin:0px;
     }
     a {
       color: $text_color_neg;
@@ -48,17 +54,20 @@ header nav {
     }
     a:hover {
       text-decoration: underline;
+      color: $text_color_neg;
     }
 }
 
-
-ul {
-  margin: 0;
-    padding: 0;
-}
 li {
-    list-style: none; 
+    list-style: none;
   }
+a, a:hover {
+  color: $main-color;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
 .logo {
   width: 150px;
@@ -72,13 +81,88 @@ li {
   color: text_color;
   font-size: 72px;
   font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
 }
+
+.main_description p {
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
 .main_image {
   width: 100%;
 }
+
 main figure {
   padding: 0;
   margin: 40px 0;
   width: 100%;
 }
-
+.about-me {
+  margin-top: 50px;
+}
+.ux-ui-projects, .web-projects, .ux-ui-watsnext {
+  margin-top: 100px;
+}
+.ux-ui-projects figure {
+  width: 500px;
+  margin: 50px auto;
+  padding: 5px;
+  border: 1px solid $main_color;
+}
+.ux-ui-projects figure img {
+  width: 100%;
+}
+.ux-ui-projects span, .web-projects span {
+  font-size: 14px;
+}
+.web-projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+}
+.web-projects figure {
+    width: 40%;
+    margin: 20px 15px;
+    /*border: 10px solid #e7ebec;
+    background-color: #e7ebec;*/
+}
+.web-projects img {
+    width: 100%;
+    height: auto;
+     border: 1px solid $main_color;
+}
+.ux-ui-watsnext li {
+  list-style: square;
+}
+.ux-ui-watsnext figure {
+  max-width: 500px;
+  margin: auto;
+    img {
+      width: 100%;
+      border: 1px solid $main-color;
+    }
+}
+.publish-design {
+  height: 300px;
+  margin: 100px 30px;
+}
+footer {
+  background-color: $main_color-dark;
+  color: $text_color_neg;
+  padding: 5px 30px;
+  margin:0;
+  font-weight: 200;
+    a {
+      color: $text_color_neg;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: $text_color_neg;
+    }
+}
