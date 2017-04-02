@@ -22,20 +22,27 @@ body {
   position: relative;
   background-color: #fff;
 }
-nav, .main_description, footer, .about-me, .ux-ui-watsnext, .web-projects {
+nav, .main_description, footer, .about-me, .ux-ui-process, .web-projects {
   padding: 0 30px;
 }
-
-header nav {
+.menu-icon {
+  visibility: hidden;
+}
+.header-bg {
   width: 100%;
   height: 100px;
-  padding-top: 20px;
   background-color: $main_color;
+  -webkit-clip-path: polygon(100% 0, 100% 80%, 80% 62%, 57% 95%, 25% 75%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 80%, 80% 62%, 57% 95%, 25% 75%, 0 100%, 0 0);
+}
+header nav {
+  padding-top: 20px;
   font-weight: 200;
   display: flex;
   flex-flow: row wrap;
-  -webkit-clip-path: polygon(100% 0, 100% 80%, 80% 62%, 57% 95%, 25% 75%, 0 100%, 0 0);
-  clip-path: polygon(100% 0, 100% 80%, 80% 62%, 57% 95%, 25% 75%, 0 100%, 0 0);
+  z-index: 1001;
+  position: absolute;
+  top: 0;
 
     ul {
       display: flex;
@@ -79,13 +86,16 @@ a, a:hover {
 a:hover {
   text-decoration: underline;
 }
-
+.active {
+  text-decoration: underline;
+  color: $main_color;
+}
 .logo {
   width: 150px;
   border-radius: 50%;
   position: absolute;
   top: 20px;
-  right: 75px;
+  right: 8%;
 }
 
 .job-description {
@@ -116,18 +126,24 @@ main figure {
   margin-top: 50px;
   min-height: 350px;
 }
-.ux-ui-projects, .web-projects, .ux-ui-watsnext {
+.ux-ui-projects, .web-projects, .breadcrumb {
   margin-top: 100px;
 }
-.ux-ui-projects figure {
-  width: 500px;
-  margin: 50px auto;
-  padding: 5px;
+.breadcrumb {
+  padding-left: 50px;
 }
-.ux-ui-projects figure img {
-  width: 100%;
-  border: 1px solid $main_color;
-  padding: 5px;
+.ux-ui-projects {
+  figure {
+    width: 500px;
+    margin: 50px auto;
+    padding: 5px;
+  }
+  figure img {
+    width: 100%;
+    border: 1px solid $main_color;
+    padding: 5px;
+  }
+
 }
 .ux-ui-projects span, .web-projects span {
   font-size: 14px;
@@ -136,30 +152,36 @@ main figure {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 100%;
+
+    figure {
+        width: 40%;
+        margin: 20px 15px;
+        /*border: 10px solid #e7ebec;
+        background-color: #e7ebec;*/
+    }
+    img {
+        width: 100%;
+        height: auto;
+         border: 1px solid $main_color;
+    }
 }
-.web-projects figure {
-    width: 40%;
-    margin: 20px 15px;
-    /*border: 10px solid #e7ebec;
-    background-color: #e7ebec;*/
-}
-.web-projects img {
-    width: 100%;
-    height: auto;
-     border: 1px solid $main_color;
-}
-.ux-ui-watsnext li {
-  list-style: square;
-}
-.ux-ui-watsnext figure {
-  max-width: 500px;
-  margin: auto;
+
+.ux-ui-process {
+  padding: 0 50px;
+
+  li {
+    list-style: square;
+  }
+  figure {
+    max-width: 500px;
+    margin: auto;
     img {
       width: 100%;
       border: 1px solid $main-color;
     }
+  }
 }
+
 .publish-design {
   height: 400px;
   margin: 100px 30px;
@@ -178,4 +200,98 @@ footer {
       text-decoration: underline;
       color: $text_color_neg;
     }
+}
+
+@media all and (max-width: 800px) and (min-width: 530px) {
+  .logo {
+    visibility: hidden;
+  }
+  .ux-ui-projects, .web-projects, .breadcrumb {
+    margin-top: 50px;
+  }
+  header nav {
+    font-size: 14px;
+  }
+  header nav li {
+    padding-right: 13px;
+  }
+}
+@media all and (max-width: 529px) {
+  .ux-ui-projects figure {
+    max-width: 90%;
+  }
+  .breadcrumb, .ux-ui-projects, .web-projects, .about-me, .ux-ui-process, .main_description {
+    margin-top: 45px;
+    padding: 0 15px;
+  }
+  .job-description {
+    font-size: 42px;
+  }
+  .web-projects figure {
+    width: 100%;
+  }
+  .header-bg {
+    width: auto;
+    height: 50px;
+  }
+  header nav {
+    background-color: $main_color-dark;
+    position: fixed;
+    top: auto;
+    bottom: 0px;
+    height: 48px;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+
+    ul {
+      width: 100%;
+    }
+    li:first-child {
+      display: none;
+    }
+    li {
+      width: 20.7%;
+      font-size: 12px;
+      letter-spacing: 0.07em;
+      text-align: center;
+      margin: 0;
+      padding: 2%;
+      text-transform: uppercase;
+      border-right: 1px solid white;
+    }
+    li:last-child {
+      border-right: none;
+    }
+  }
+
+  .logo {
+    visibility: visible;
+    width: 65px;
+    top: 15px;
+    left: 15px;
+  }
+  footer {
+    height: 120px;
+    background-color: $text_color_neg;
+    color: $main_color-dark;
+    font-weight: 300;
+    padding: 5px 15px;
+
+    p {
+      padding-top: 10px;
+      border-top: 2px dotted $main_color-dark;
+    }
+
+    a {
+      color: $main_color-dark;
+      text-decoration: underline;
+    }
+  }
+  .main_image {
+    width: 160%;
+    position: relative;
+    right: 175px;
+  }
+
 }

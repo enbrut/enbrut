@@ -1,15 +1,10 @@
 <header>
+  <div class="header-bg">
+  </div>
   <nav>
-    <ul>
-      <!-- <img src="images/home.png"> -->
-      <%= li_menu_link "<img src=\"images/home.png\">", "/index.html" %>
-      <%= li_menu_link "UI Development", "/ui_development.html" %>
-      <%= li_menu_link "UX/UI Design", "/ux-ui.html" %>
-      <%= li_menu_link "Publish Design", "/publish.html" %>
-      <%= li_menu_link "About me", "/about.html" %>
-    </ul>
+    <%= partial "layouts/menu" %>
   </nav>
   <figure>
-    <img class="logo" src="images/enbrut.png">
+    <a href="index.html"><img class="logo" src="images/enbrut.png"></a>
   </figure>
 </header>
