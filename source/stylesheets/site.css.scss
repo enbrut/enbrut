@@ -113,11 +113,11 @@ a:hover {
   margin-bottom: 0px;
 }
 
-.main_image {
+.main_image, .about-me img {
   width: 100%;
 }
 
-main figure {
+main figure, .about-me figure {
   padding: 0;
   margin: 40px 0;
   width: 100%;
@@ -220,7 +220,7 @@ footer {
   .ux-ui-projects figure {
     max-width: 90%;
   }
-  .breadcrumb, .ux-ui-projects, .web-projects, .about-me, .ux-ui-process, .main_description {
+  .breadcrumb, .ux-ui-projects, .web-projects, .about-me, .ux-ui-process, .main_description, .publish-design {
     margin-top: 45px;
     padding: 0 15px;
   }
